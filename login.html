@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<header>
+	<section id="main">
+      <nav>
+        <div class="logo">
+          <a href="#">Artificial Intelligence</a>
+        </div>
+   
+        <ul class="menu">
+          <li><a href="#">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+		  <li><a href="contacts.html">CONTACTS</a></li>
+        </ul>
+      </nav>
+</header>
+
+<body>
+	<div class="overlay"></div>
+	<video id="bg" autoplay muted loop>
+		<source src="bidyu.mp4" type="video/mp4">
+	</video>
+	
+	<div class="main-text">
+        <h2>WELCOME TO THE WORLD WHERE</h2>
+        <h1>FUTURE IS AI</h1>
+		<br></br> <br></br> 
+		<p> To learn more about AI, CLICK ABOUT </p>
+</body> 
+
+<style>
+
+	body {
+	margin: 0px;
+	padding: 0px;
+	ont-family: "Asap", sans-serif;
+}
+	* {
+	box-sizing: border-box;
+}
+	ul {
+	list-style: none;
+}
+	a {
+	text-decoration: none;
+}
+	nav {
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 60px;
+	position: fixed;
+	width: 100%;
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 0px 5%;
+	z-index: 1;
+}
+	.logo a {
+	font-weight: 700;
+	color: white;
+	font-size: 2rem;
+}
+	nav ul {
+	display: flex;
+}
+	nav ul li a {
+	height: 40px;
+	line-height: 43px;
+	margin: 10px;
+	padding: 0px 30px;
+	display: flex;
+	font-size: 1rem;
+	font-weight: 600;
+	color: white;
+	transition: 0.1s;
+}
+	nav ul li a:hover,
+	.main-text a:hover {
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 3px;
+	color: #fff;
+}
+	.main-text{
+	position: absolute;
+	left: 13%;
+	top: 46%;
+	transform: translate(-13%,-42%);
+	line-height: 0;
+}
+	.main-text h2{
+	font-weight: 500;
+	font-size: 30px;
+	color: #e0ffff;
+}
+	.main-text h1{
+	font-size: 75px;
+	font-weight: 500;
+	font-family: "Roboto", sans-serif;
+	color: #fff;
+}
+	.main-text p{
+	font-weight: 500;
+	font-size: 20px;
+	color: #e0ffff;
+}
+	.main-text a{
+	width: 150px;
+	height: 40px;
+	outline: none;
+	border-radius: 5px;
+	font-size: 15px;
+	font-weight: 200;
+	padding: 1rem;
+}
+	video {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vw;
+	object-fit: fill;
+	z-index: -1;
+	opacity: 1;
+}
+	.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(48,25,52,0.75);
+}
+
+	
+</style> 
+</html> 

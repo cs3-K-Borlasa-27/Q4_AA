@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+	<body>
+		<div class="container">
+		<form action="" id="form">
+		
+		<h1> LOGIN HERE </h1>
+		
+		<div class="input-group">
+		<label for="username">Name:</label>
+		<input type="text" id="fname" name="name1" placeholder="name" onblur="k()" onfocus="d()">
+	</div>
+	
+	<br> 
+	
+	<div class="input-group">
+		<label for="username">Preffered Username:</label>
+		<input type="text" id="fname" name="name2" placeholder="name" onblur="k()" onfocus="d()">
+	</div>
+	
+	<br> 
+	
+		<div class="input-group">
+		<label for="email">Email:</label>
+		<input type="text" id="fname" name="name3" placeholder="name01@gmail.com" onblur="k()" onfocus="d()">
+	</div>
+	
+	<br> 
+	
+		<div class="input-group">
+		<label for="password">Password:</label>
+		<input type="password" placeholder="Enter Password" name="psw" required onblur="k()" onfocus="d()">
+	</div>
+	
+	<br> 
+	
+		<div class="input-group">
+		<label for="cpassword">Confirm Password:</label>
+		<input type="password" placeholder="Confirm Password" name="psw-confirm" required onblur="k()" onfocus="d()">
+	</div>
+	
+	<br>
+
+	<button id = "submit" onclick = "Submit()"> <a href="login.html"> Submit  </button> </a>
+	<button id = "reset" onclick = "Reset()"> Reset </button>
+		
+	<br> <br>
+	
+			</form>
+		</div>
+		
+	<script>
+	
+	function k() {
+        const name = document.getElementById('name').value;
+        const username = document.getElementById('username').value;
+        const psw = document.getElementById('pass').value;
+        const confirm = document.getElementById('Cpass').value;
+        const email = document.getElementById('email').value;
+
+        localStorage.setItem('name', name);
+        localStorage.setItem('Uname', username);
+        localStorage.setItem('psw', psw);
+        localStorage.setItem('confirm', confirm);
+        localStorage.setItem('email', email);
+
+        alert('Welcome, ' + username + '!');
+        return false;
+    }
+
+
+    window.onload = function () {
+        document.getElementById('name').value = localStorage.getItem('name') || '';
+        document.getElementById('Uname').value = localStorage.getItem('Uname') || '';
+        document.getElementById('psw').value = localStorage.getItem('psw') || '';
+        document.getElementById('confirm').value = localStorage.getItem('confirm') || '';
+        document.getElementById('email').value = localStorage.getItem('email') || '';
+    }
+</script>
+
+	</body>
+	
+	<style>
+	
+	body{
+    background: rgb(232,10,10);
+	background: linear-gradient(0deg, rgba(232,10,10,1) 0%, rgba(0,0,0,1) 79%);
+}
+
+	#form{
+    width:400px;
+    margin-left: 470px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding:30px;
+}
+
+	h1{
+    text-align: center;
+    color:#4E0707;
+	margin-top: 5px;
+}
+
+	#form button{
+    background-color: #4E0707;
+    color:white;
+    border: 1px solid;
+    padding:10px;
+}
+
+	.input-group{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+	.input-group input{
+    border-radius: 5px;
+    font-size:20px;
+    margin-top:5px;
+    padding:10px;
+}
+
+</style>
+
+</html>
